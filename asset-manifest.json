@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/modern-crud-app-in-react/static/js/main.76fcd6c6.chunk.js",
+    "main.js.map": "/modern-crud-app-in-react/static/js/main.76fcd6c6.chunk.js.map",
+    "runtime-main.js": "/modern-crud-app-in-react/static/js/runtime-main.47fc963e.js",
+    "runtime-main.js.map": "/modern-crud-app-in-react/static/js/runtime-main.47fc963e.js.map",
+    "static/js/2.752f07ae.chunk.js": "/modern-crud-app-in-react/static/js/2.752f07ae.chunk.js",
+    "static/js/2.752f07ae.chunk.js.map": "/modern-crud-app-in-react/static/js/2.752f07ae.chunk.js.map",
+    "index.html": "/modern-crud-app-in-react/index.html",
+    "static/js/2.752f07ae.chunk.js.LICENSE.txt": "/modern-crud-app-in-react/static/js/2.752f07ae.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47fc963e.js",
+    "static/js/2.752f07ae.chunk.js",
+    "static/js/main.76fcd6c6.chunk.js"
+  ]
+}
