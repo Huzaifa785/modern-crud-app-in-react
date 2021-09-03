@@ -14,7 +14,7 @@ function CreateProduct() {
         e.preventDefault()
         try {
             setLoading(true)
-            await axios.post("https://60f547872208920017f39fe8.mockapi.io/products", {productName, price, description})
+            await axios.post("http://localhost:5000/create-product", {productName, price, description})
             setLoading(false)
             history.push("/products")
         } catch (error) {
@@ -49,7 +49,7 @@ function CreateProduct() {
                         </div>
                     </div>
                     <div className="row mt-3 ml-1">
-                        <input type="submit" className="btn btn-primary" value="Create" disabled={isLoading} />
+                        <input type="submit" className="btn btn-primary" value="Create" disabled={productName === '' || price === '' || description === '' ? true : false} />
                     </div>
                 </div>
             </form>

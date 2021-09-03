@@ -8,7 +8,7 @@ function Products(props) {
     const [productList, setProductList] = useState([])
     useEffect(async () => {
         setLoading(true)
-        let products = await axios.get("https://60f547872208920017f39fe8.mockapi.io/products")
+        let products = await axios.get("http://localhost:5000/list-products")
         setLoading(false)
         setProductList([...products.data])
     }, [])
@@ -66,13 +66,13 @@ function Products(props) {
                                         {
                                             productList.map((product) => {
                                                 return <tr>
-                                                    <td>{product.id}</td>
+                                                    <td>{product._id}</td>
                                                     <td>{product.productName}</td>
                                                     <td>${product.price}</td>
                                                     <td>{product.description}</td>
                                                     <td>
-                                                        <Link to={`/edit-product/${product.id}`} className=" mt-1 btn btn-sm btn-primary mr-2">Edit</Link>
-                                                        <button onClick={() => handleDelete(product.id)} className="btn btn-sm btn-danger mt-1">Delete</button>
+                                                        <Link to={`/edit-product/${product._id}`} className=" mt-1 btn btn-sm btn-primary mr-2">Edit</Link>
+                                                        <button onClick={() => handleDelete(product._id)} className="btn btn-sm btn-danger mt-1">Delete</button>
                                                     </td>
                                                 </tr>
                                             })

@@ -13,9 +13,10 @@ function EditProduct(props) {
     let handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            setLoading(true)
-            await axios.put(`https://60f547872208920017f39fe8.mockapi.io/products/${props.match.params.id}`, {productName, price, description})
-            setLoading(false)
+            console.log(props.match.params.id)
+            // setLoading(true)
+            await axios.put(`http://localhost:5000/update-product/${props.match.params.id}`, {productName, price, description})
+            // setLoading(false)
             history.push("/products")
         } catch (error) {
             console.log(error);
@@ -24,7 +25,7 @@ function EditProduct(props) {
     useEffect(async () => {
         try {
             setLoading(true)
-            let product = await axios.get(`https://60f547872208920017f39fe8.mockapi.io/products/${props.match.params.id}`)
+            let product = await axios.get(`http://localhost:5000/update-product/${props.match.params.id}`)
             setLoading(false)
             setProductName(product.data.productName)
             setPrice(product.data.price)
@@ -41,7 +42,7 @@ function EditProduct(props) {
             </div>
 
             {
-                isLoading ? <h3>Loading...</h3> : 
+                // isLoading ? <h3>Loading...</h3> : 
                 <form onSubmit={handleSubmit}>
                 <div className="form-div">
                     <div className="row">
